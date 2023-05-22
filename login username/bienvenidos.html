@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página principal</title>
+	<style>
+		body {
+			background-color: #222;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.options {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			width: 20%;
+			height: 80%;
+			margin-right: 20px;
+		}
+
+		.option {
+			display: block;
+			margin-bottom: 10px;
+			padding: 10px;
+			width: 100%;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+			text-decoration: none;
+			color: #333;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.option:hover {
+			background-color: #1abc9c;
+			color: #fff;
+		}
+
+		/* Animaciones */
+		@keyframes fondoAnimado {
+			0% { background-color: #ff5733; }
+			25% { background-color: #ffda33; }
+			50% { background-color: #33ff57; }
+			75% { background-color: #33cfff; }
+			100% { background-color: #a033ff; }
+		}
+
+		@keyframes entradaAnimada {
+			from { opacity: 0; transform: translateX(-50px); }
+			to { opacity: 1; transform: translateX(0); }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="options">
+			
+			<li><a href="cuentas.html">cuentas</a></li>
+			<li><a href="personas.html">personas</a></li>
+			<li><a href="accesos.html">accesos</a></li>
+			<li><a href="bots.html">bots</a></li>
+			<li><a href="amigos.html">amigos</a></li>
+			<li><a href="computadoras conectadas.html">computadoras conectadas</a></li>
+			<li><a href="redes.html">redes</a></li>
+			<li><a href="cuentas de usuarios.html">cuentas de usuarios</a></li>
+			<li><a href="opcional.html">opcional</a></li>
+		</div>
+		<div class="entrada" style="animation: entradaAnimada 1s ease-out;">
+			<h1>Bienvenido/a</h1>
+			<p>Esta es tu pagina principal</p>
+		</div>
+	</div>
+
+	<script>
+		// Animación de fondo
+		document.body.style.animation = "fondoAnimado 10s ease infinite";
+	</script>
+</body>
+</html>

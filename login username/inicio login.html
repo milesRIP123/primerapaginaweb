@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style>
+		body {
+			background-color: #222;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		input[type="text"], input[type="password"] {
+			display: block;
+			margin-bottom: 10px;
+			padding: 10px;
+			width: 100%;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		input[type="submit"] {
+			background-color: #1abc9c;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #16a085;
+		}
+
+		/* Animaciones */
+		@keyframes fondoAnimado {
+			0% { background-color: #ff5733; }
+			25% { background-color: #ffda33; }
+			50% { background-color: #33ff57; }
+			75% { background-color: #33cfff; }
+			100% { background-color: #a033ff; }
+		}
+
+		@keyframes botonAnimado {
+			0% { transform: scale(1); }
+			50% { transform: scale(1.1); }
+			100% { transform: scale(1); }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="form">
+			<form action="pagina_web_central.html">
+				<label for="usuario">Usuario:</label>
+				<input type="text" id="usuario" name="usuario" required>
+				<label for="contrasena">Contraseña:</label>
+				<input type="password" id="contrasena" name="contrasena" required>
+                <li><a href="bienvenidos.html">iniciar secion</a></li>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		// Animación de fondo
+		document.body.style.animation = "fondoAnimado 10s ease infinite";
+
+		// Animación de botones
+		let botones = document.querySelectorAll("input[type='submit']");
+		botones.forEach(boton => {
+			boton.style.animation = "botonAnimado 1s ease-in-out infinite";
+		});
+	</script>
+</body>
+</html>
